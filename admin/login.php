@@ -45,7 +45,7 @@
                                                 me</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit"  class="btn bg-gradient-primary w-100 my-4 mb-2">Sign                                         in</button>
+                                            <button type="submit"  class="btn bg-gradient-primary w-100 my-4 mb-2">Signin</button>
                                         </div>
                                        
                                     </form>
