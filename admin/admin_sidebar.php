@@ -17,10 +17,10 @@
                     </div>
                 </li>
                 <li class="header">MAIN</li>
-                <li class="active open"> <a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-                <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span> <span class="badge badge-success float-right">7</span></a>
+                <li class="active open"> <a href="/fashionshop/admin/deshboard.php"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Menu</span> <span class="badge badge-success float-right">7</span></a>
                     <ul class="ml-menu">
-                        <li><a href="mail-inbox.html">Inbox</a></li>
+                        <li><a href="/fashionshop/admin/sub_category.php">Category</a></li>
                         <li><a href="chat.html">Chat</a></li>
                         <li><a href="events.html">Calendar</a></li>
                         <li><a href="file-dashboard.html">File Manager</a></li>

@@ -44,59 +44,92 @@
     <!-- css end-->
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
-    <!--sidebar start-->
-    <?php include("admin_sidebar.php"); ?>
-    <!-- sidebar end-->
+<body class="theme-black">
+    <!-- Page Loader -->
+    <?php include("loader.php"); ?>
+    <!-- End Page Loader -->
 
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-        <!-- navbar start-->
-        <?php include("admin_navbar.php"); ?>
-        <!-- navbar end-->
+    <!-- overlay manu -->
+    <?php include("overlay_menu.php"); ?>
+    <!-- overlay manu end -->
 
-        <div class="container-fluid py-4">
-            <!-- Contain Start-->
-            <div class="row">
-                <form method="POST">
-                    <label>Name of sub category:</label>
-                    <input class=" input-group-outline " type="text" name="name" required>
-                    <label>Select a Category</label>
-                    <select name="category">
-                        <?php
-				// use a while loop to fetch data
-				// from the $all_categories variable
-				// and individually display as an option
-				while ($category = mysqli_fetch_array(
-						$categoryes,MYSQLI_ASSOC)):;
-			?>
-                        <option  value="<?php echo $category["id"];
-					// The value we usually set is the primary key
-				?>">
-                            <?php echo $category["category_name"];
-						// To show the category name to the user
-					?>
-                        </option>
-                        <?php
-				endwhile;
-				// While loop must be terminated
-			?>
-                    </select>
-                    
-                    
-                    <input  type="submit" value="submit" class="btn bg-gradient-primary" name="submit">
-                </form>
+    <!-- Overlay For Sidebars start -->
+    <div class="overlay"></div>
+    <!-- Overlay For Sidebars end-->
+
+    <!-- admin mini sidebar start -->
+    <?php include("admin_minisidebar.php"); ?>
+    <!-- admin mini sidebar end -->
+
+    <!-- admin sidebar menu start -->
+    <aside class="right_menu">
+        <!-- admin theam start -->
+        <?php include("admin_theam.php"); ?>
+        <!-- admin theam end  -->
+        <!-- sidebar start -->
+        <?php include("admin_sidebar.php"); ?>
+        <!--  sidebar end -->
+    </aside>
+    <!-- admin  sidebar end -->
+
+    <!-- Main Content Start -->
+    <section class="content home">
+        <div class="container-fluid">
+            <!-- admin header  start-->
+            <?php include("admin_header.php"); ?>
+            <!-- admin header end-->
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2><strong>Visit</strong> & Sales Statistics</h2>
+                        </div>
+                        <div class="body m-b-10">
+                            <form method="POST">
+
+
+                                <label>Name of sub category:</label>
+                                <input type="text" class="form-control" name="name"
+                                    placeholder="Enter Sub category name"  require/>
+
+                                <label>Select a Category</label>
+                                <select class="form-control" name="category">
+                                    <option   value="">-- Please select --</option>
+
+                                    <!--   use a while loop to fetch data
+                                         from the $all_categories variable
+                                         and individually display as an option -->
+                                    <?php while ($category = mysqli_fetch_array($categoryes,MYSQLI_ASSOC)):;?>
+
+                                    <option  value="<?php  echo $category["id"]; ?>">
+
+                                        <!--show category name-->
+                                        <?php echo $category["category_name"]; ?>
+
+                                    </option>
+                                    <?php endwhile; ?>
+
+
+                                </select>
+
+
+                        
+
+                            <input type="submit" value="submit" class="btn bg-gradient-primary" name="submit">
+                        </form>
+                    </div>
+                    <!-- Contain End -->
+
+                </div>
             </div>
-            <!-- Contain End -->
-
-            <!-- Admin Footer Start -->
-            <?php include("admin_footer.php"); ?>
-            <!-- Admin Footer end -->
         </div>
-        <!-- Contain End-->
-    </main>
-    <!-- deshboard Theam start-->
-    <?php include("admin_theam.php"); ?>
-    <!-- deshboard theam end -->
+        </div>
+
+        </div>
+    </section>
+    <!-- Main Content end-->
+
     <!-- script start-->
     <?php include("script.php"); ?>
     <!-- script end-->
