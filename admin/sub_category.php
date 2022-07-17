@@ -13,7 +13,7 @@
 	// and inserts the data in the database accordingly
 	if(isset($_POST['submit']))
 	{
-		// Store the Product name in a "name" variable
+		// Store the subcategory name in a "name" variable
 		$name = mysqli_real_escape_string($con,$_POST['name']);
 		
 		// Store the Category ID in a "id" variable
@@ -21,8 +21,7 @@
 		
 		// Creating an insert query using SQL syntax and
 		// storing it in a variable.
-		$sql_insert =
-		"INSERT INTO `sub_category`(`name`, `category_id`)
+		$sql_insert ="INSERT INTO `sub_category`(`name`, `category_id`)
 			VALUES ('$name','$id')";
 		
 		// The following code attempts to execute the SQL query
@@ -60,7 +59,7 @@
             <div class="row">
                 <form method="POST">
                     <label>Name of sub category:</label>
-                    <input class="input-group input-group-outline my-3" type="text" name="name" required><br>
+                    <input class=" input-group-outline " type="text" name="name" required>
                     <label>Select a Category</label>
                     <select name="category">
                         <?php
@@ -70,7 +69,7 @@
 				while ($category = mysqli_fetch_array(
 						$categoryes,MYSQLI_ASSOC)):;
 			?>
-                        <option value="<?php echo $category["id"];
+                        <option  value="<?php echo $category["id"];
 					// The value we usually set is the primary key
 				?>">
                             <?php echo $category["category_name"];
@@ -82,9 +81,9 @@
 				// While loop must be terminated
 			?>
                     </select>
-                    <br>
                     
-                    <input  type="submit" value="submit" class="btn bg-gradient-primary w-100 my-4 mb-2" name="submit">
+                    
+                    <input  type="submit" value="submit" class="btn bg-gradient-primary" name="submit">
                 </form>
             </div>
             <!-- Contain End -->
