@@ -61,12 +61,12 @@
                     <div class="row p-2">
                         <div class="col-sm-3">
                             <label class="p-1">Name of sub category:</label>
-                            <input type="text" class="form-control border border-primary" name="name"
+                            <input type="text" class="form-control border border-primary text-center" name="name"
                                 placeholder="  enter category" require>
                         </div>
                         <div class="col-sm-4">
                             <label class="p-1">Select a Category</label>
-                            <select class="form-control border border-primary" name="category" require>
+                            <select class="form-control border border-primary text-center" name="category" require>
                                 <option value=""> -- Please select --</option>
 
                                 <!--   use a while loop to fetch data
@@ -85,7 +85,7 @@
 
                             </select>
                         </div>
-                        <div class="col-sm-2 p-4 m-1">
+                        <div class="col-sm-2 p-4 m-1 text-center">
 
                             <input type="submit" value="submit" class="btn bg-gradient-primary" name="submit">
                         </div>
@@ -94,8 +94,8 @@
             </div>
             <br>
             <div class="card row">
-                <div class="">
-                    <h3>Sub Category</h3>
+                <div class="p-2 text-center">
+                    <h3>Category && Subcategory</h3>
                 </div>
                 <div class=" table table-bordered ">
                     <table cellpadding="0" cellspacing="0" border="0"
