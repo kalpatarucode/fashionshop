@@ -97,10 +97,9 @@
                 <div class="p-2 text-center">
                     <h3>Category && Subcategory</h3>
                 </div>
-                <div class=" table table-bordered ">
-                    <table cellpadding="0" cellspacing="0" border="0"
-                        class="datatable-1 table table-bordered table-striped	 display" width="100%">
-                        <thead>
+                <div class=" table">
+                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+                        <thead class="thead-dark" >
                             <tr>
                                 <th>#</th>
                                 <th>Category</th>
@@ -123,8 +122,9 @@
                             <?php $cnt=$cnt+1; } ?>
 
                     </table>
-
                 </div>
+
+             </div>
                 <!-- Contain End -->
 
                 <!-- Admin Footer Start -->
