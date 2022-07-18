@@ -1,19 +1,21 @@
-<div class="block-header">
-    <div class="row clearfix">
-        <div class="col-lg-5 col-md-5 col-sm-12">
-            <h2>Dashboard</h2>
-            <ul class="breadcrumb padding-0">
-                <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i></a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-            </ul>
-        </div>
-        <div class="col-lg-7 col-md-7 col-sm-12">
-            <div class="input-group m-b-0">
-                <input type="text" class="form-control" placeholder="Search...">
-                <span class="input-group-addon">
-                    <i class="zmdi zmdi-search"></i>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">
+    <img src="/fashionshop/img/logo.png" width="40" height="40" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      
+    </ul>
+   
+  </div>
+</nav>

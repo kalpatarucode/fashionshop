@@ -11,42 +11,52 @@
         <!-- css end-->
     </head>
 
-    <body background="/fashionshop/admin/assets/images/logo/bglogin5.png">
-    <div class="authentication">
-    <div class="container">
-        <div class="col-md-12 content-center">
-            <div class="row">
-                
-                <div class="col-lg col-md content-center ">
-                         
-                    <div class="card-plain">
-                        <div><h4>Fashion Shop</h4></div>
-                        <div class="header">
-                            <h5>Log in</h5>
-                        </div>
-                        <form class="form" action="auth.php" method="POST">
-                            <div class="input-group">
-                                <input type="text" name="username" class="form-control" placeholder="User Name" require>
-                                <span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+    <body>
+        <main class="main-content  mt-0">
+            <div class="page-header align-items-start min-vh-100"
+                style="background-image: url('/fashionshop/img/loginbg.jpg');">
+                <span class="mask bg-gradient-dark opacity-6"></span>
+                <div class="container my-auto">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-8 col-12 mx-auto">
+                            <div class="card z-index-0 fadeIn3 fadeInBottom">
+                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
+                                        <div class="row mt-3 text-center ">
+                                            <h5 class="text-white">welcome To Fashionshop</h5>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <form action="auth.php" method="POST"  class="text-start">
+                                        <div class="input-group input-group-outline my-3">
+                                            <label class="form-label">Username</label>
+                                            <input type="text" name="username" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group-outline mb-3">
+                                            <label class="form-label">Password</label>
+                                            <input type="password" name="password" class="form-control">
+                                        </div>
+                                        <div class="form-check form-switch d-flex align-items-center mb-3">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                                            <label class="form-check-label mb-0 ms-3" for="rememberMe">Remember
+                                                me</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit"  class="btn bg-gradient-primary w-100 my-4 mb-2">Sign                                                in</button>
+                                        </div>
+                                       
+                                    </form>
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <input type="password" name="password" placeholder="Password" class="form-control" require/>
-                                <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
-                            </div>    
-                            <div class="input-group">
-                            <button type="submit"  class="btn btn-primary btn-round btn-block"> SIGN IN</button>
-                            </div>                 
-                        </form>
-                       <!-- <div class="footer">                        
-                           <a href="sign-up.html" class="btn btn-primary btn-simple btn-round btn-block">SIGN UP</a>                            
-                           <a href="forgot-password.html" class="link">Forgot Password?</a>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </div>
-</div>
+        </main>
         <!-- script start-->
         <?php include("script.php"); ?>
         <!-- script end-->

@@ -11,17 +11,24 @@
     </title> 
 </head>
 <body>
-<!-- Jquery Core Js -->
-<script src="/fashionshop/admin/assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
-<script src="/fashionshop/admin/assets/bundles/vendorscripts.bundle.js"></script> <!-- slimscroll, waves Scripts Plugin Js -->
-
-<script src="/fashionshop/admin/assets/bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
-<script src="/fashionshop/admin/assets/bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
-<script src="/fashionshop/admin/assets/bundles/morrisscripts.bundle.js"></script> <!-- Morris Plugin Js --> 
-<script src="/fashionshop/admin/assets/bundles/sparkline.bundle.js"></script> <!-- sparkline Plugin Js --> 
-<script src="/fashionshop/admin/assets/bundles/doughnut.bundle.js"></script>
-
-<script src="/fashionshop/admin/assets/bundles/mainscripts.bundle.js"></script>
-<script src="/fashionshop/admin/assets/js/pages/index.js"></script>
+ <!--   Core JS Files   -->
+ <script src="/fashionshop/admin/assets/js/core/popper.min.js"></script>
+    <script src="/fashionshop/admin/assets/js/core/bootstrap.min.js"></script>
+    <script src="/fashionshop/admin/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/fashionshop/admin/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="/fashionshop/admin/assets/js/plugins/chartjs.min.js"></script>
+<script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/fashionshop/admin/assets/js/material-dashboard.min.js?v=3.0.4"></script>
 </body>
 </html>
