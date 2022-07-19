@@ -33,6 +33,12 @@
 			echo '<script>alert("Product added successfully")</script>';
 		}
 	}
+    if(isset($_GET['del']))
+		  {
+		          mysqli_query($con,"delete from sub_category where id = '".$_GET['id']."'");
+                  $_SESSION['delmsg']="SubCategory deleted !!";
+		  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,11 +65,7 @@
             <div class="card row">
                 <form method="POST">
                     <div class="row p-2">
-                        <div class="col-sm-3">
-                            <label class="p-1">Name of sub category:</label>
-                            <input type="text" class="form-control border border-primary text-center" name="name"
-                                placeholder="  enter category" require>
-                        </div>
+                        
                         <div class="col-sm-4">
                             <label class="p-1">Select a Category</label>
                             <select class="form-control border border-primary text-center" name="category" require>
@@ -85,6 +87,11 @@
 
                             </select>
                         </div>
+                        <div class="col-sm-3">
+                            <label class="p-1">Name of sub category:</label>
+                            <input type="text" class="form-control border border-primary text-center" name="name"
+                                placeholder="  enter category" require>
+                        </div>
                         <div class="col-sm-2 p-4 m-1 text-center">
 
                             <input type="submit" value="submit" class="btn bg-gradient-primary" name="submit">
@@ -103,7 +110,9 @@
                             <tr>
                                 <th>#</th>
                                 <th>Category</th>
-                                <th>Sub category</th>
+                                <th>Sub category</th>                                
+                                <th></th>
+
                                
                             </tr>
                         </thead>
@@ -116,8 +125,10 @@
                             <tr>
                                 <td><?php echo htmlentities($cnt);?></td>
                                 <td><?php echo htmlentities($row['category_name']);?></td>
-                                <td><?php echo htmlentities($row['name']);?></td>
-                                
+                                <td><?php echo htmlentities($row['name']);?></td><td>
+                                <a href="edit_sub_category.php?id=<?php echo $row['id']?>" ><i class="material-icons opacity-10">edit</i></a>
+								<a href="sub_category.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="material-icons opacity-10">delete</i></a></td>
+                                </td>
                             </tr>
                             <?php $cnt=$cnt+1; } ?>
 
