@@ -7,7 +7,7 @@
 								</div>
 								<div class="logo d-none d-lg-flex">
 									<a href="index.html">
-										<img src="assets/images/logo-icon.png" class="logo-icon" alt="" />
+										<img src="/fashionshop/img/logo.png" class="logo-icon" alt="" />
 									</a>
 								</div>
 							</div>
@@ -15,12 +15,7 @@
 						<div class="col-12 col-md order-4 order-md-2">
 							<div class="input-group flex-nowrap px-xl-4">
 								<input type="text" class="form-control w-100" placeholder="Search for Products">
-								<select class="form-select flex-shrink-0" aria-label="Default select example" style="width: 10.5rem;">
-									<option selected>All Categories</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
-								</select>	<span class="input-group-text cursor-pointer"><i class='bx bx-search'></i></span>
+									<span class="input-group-text cursor-pointer"><i class='bx bx-search'></i></span>
 							</div>
 						</div>
 						<div class="col col-md-auto order-3 d-none d-xl-flex align-items-center">
@@ -28,7 +23,7 @@
 							</div>
 							<div class="ms-2">
 								<p class="mb-0 font-13">CALL US NOW</p>
-								<h5 class="mb-0">+91 99099*****</h5>
+								<h5 class="mb-0">+91 9099678764</h5>
 							</div>
 						</div>
 						<div class="col col-md-auto order-2 order-md-4">
