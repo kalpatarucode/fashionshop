@@ -1,23 +1,24 @@
 <?php
+    include("dbconnect.php");
 
 	// Connect to database
-	$con = mysqli_connect("localhost","root","","fashionshop");
+	//$con = mysqli_connect("localhost","root","","fashionshop");
 	
 	// mysqli_connect("servername","username","password","database_name")
 
 	// Get all the categories from category table
 	$sql = "SELECT * FROM `category`";
-	$categoryes = mysqli_query($con,$sql);
+	$categoryes = mysqli_query($db,$sql);
 
 	// The following code checks if the submit button is clicked
 	// and inserts the data in the database accordingly
 	if(isset($_POST['submit']))
 	{
 		// Store the subcategory name in a "name" variable
-		$name = mysqli_real_escape_string($con,$_POST['name']);
+		$name = mysqli_real_escape_string($db,$_POST['name']);
 		
 		// Store the Category ID in a "id" variable
-		$id = mysqli_real_escape_string($con,$_POST['category']);
+		$id = mysqli_real_escape_string($db,$_POST['category']);
 		
 		// Creating an insert query using SQL syntax and
 		// storing it in a variable.
@@ -28,14 +29,14 @@
 		// if the query executes with no errors
 		// a javascript alert message is displayed
 		// which says the data is inserted successfully
-		if(mysqli_query($con,$sql_insert))
+		if(mysqli_query($db,$sql_insert))
 		{
 			echo '<script>alert("Product added successfully")</script>';
 		}
 	}
     if(isset($_GET['del']))
 		  {
-		          mysqli_query($con,"delete from sub_category where id = '".$_GET['id']."'");
+		          mysqli_query($db,"delete from sub_category where id = '".$_GET['id']."'");
                   $_SESSION['delmsg']="SubCategory deleted !!";
 		  }
 
@@ -64,7 +65,7 @@
             <!-- Contain Start-->
             <div class="card row">
                 <form method="POST">
-                    <div class="row p-2">
+                    <div class="row p-2 m-2">
                         
                         <div class="col-sm-4">
                             <label class="p-1">Select a Category</label>
@@ -94,30 +95,30 @@
                         </div>
                         <div class="col-sm-2 p-4 m-1 text-center">
 
-                            <input type="submit" value="submit" class="btn bg-gradient-primary" name="submit">
+                            <input type="submit" value="submit" class="btn btn-info" name="submit">
                         </div>
                     </div>
                 </form>
             </div>
             <br>
-            <div class="card row">
+            <div class="card row m-1">
                 <div class="p-2 text-center">
                     <h3>Category && Subcategory</h3>
                 </div>
-                <div class=" table">
-                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+                <div class="table table-responsive p-1 m-2">
+                    <table  class="table align-items-center mb-0" >
                         <thead class="thead-dark" >
                             <tr>
                                 <th>#</th>
                                 <th>Category</th>
                                 <th>Sub category</th>                                
-                                <th></th>
+                                <th>Action</th>
 
                                
                             </tr>
                         </thead>
                         <tbody>
-                        <?php $query=mysqli_query($con,"select sub_category.id,category.category_name,sub_category.name from sub_category join category on category.id=sub_category.category_id");
+                        <?php $query=mysqli_query($db,"select sub_category.id,category.category_name,sub_category.name from sub_category join category on category.id=sub_category.category_id");
                         $cnt=1;
                             while($row=mysqli_fetch_array($query))
                                 {
@@ -126,8 +127,8 @@
                                 <td><?php echo htmlentities($cnt);?></td>
                                 <td><?php echo htmlentities($row['category_name']);?></td>
                                 <td><?php echo htmlentities($row['name']);?></td><td>
-                                <a href="edit_sub_category.php?id=<?php echo $row['id']?>" ><i class="material-icons opacity-10">edit</i></a>
-								<a href="sub_category.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="material-icons opacity-10">delete</i></a></td>
+                                <a href="edit_sub_category.php?id=<?php echo $row['id']?>" ><i class="material-icons btn btn-success opacity-10">edit</i></a>
+								<a href="sub_category.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"><i class="material-icons btn btn-danger opacity-10">delete</i></a></td>
                                 </td>
                             </tr>
                             <?php $cnt=$cnt+1; } ?>
