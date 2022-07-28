@@ -71,7 +71,7 @@ if(isset($_GET['del']))
                                 <td><?php echo htmlentities($row['pcompany']);?></td>
                                 <td><?php echo htmlentities($row['price']);?></td>
                                 <td>
-                                    <a href="edit-products.php?id=<?php echo $row['id']?>"><i
+                                    <a href="edit_product.php?id=<?php echo $row['id']?>"><i
                                             class="material-icons btn btn-success opacity-10">edit</i></a>
                                     <a href="products.php?id=<?php echo $row['id']?>&del=delete"
                                         onClick="return confirm('Are you sure you want to delete?')"><i

@@ -69,7 +69,7 @@
                         
                         <div class="col-sm-4">
                             <label class="p-1">Select a Category</label>
-                            <select class="form-control border border-primary text-center" name="category" require>
+                            <select class="form-control border border-primary text-center" name="category" required>
                                 <option value=""> -- Please select --</option>
 
                                 <!--   use a while loop to fetch data
@@ -91,7 +91,7 @@
                         <div class="col-sm-3">
                             <label class="p-1">Name of sub category:</label>
                             <input type="text" class="form-control border border-primary text-center" name="name"
-                                placeholder="  enter category" require>
+                                placeholder="  enter category" required>
                         </div>
                         <div class="col-sm-2 p-4 m-1 text-center">
 

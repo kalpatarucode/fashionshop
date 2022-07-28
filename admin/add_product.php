@@ -62,10 +62,7 @@ $_SESSION['msg']="Product Inserted Successfully !!";
         });
     }
 
-    function selectCountry(val) {
-        $("#search-box").val(val);
-        $("#suggesstion-box").hide();
-    }
+  
     </script>
 </head>
 
