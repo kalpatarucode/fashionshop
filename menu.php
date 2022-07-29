@@ -14,7 +14,7 @@
 										<div class="col-md-4">
 											<h6 class="large-menu-title">men</h6>
 											<ul class="">
-												<li><a href="#">T-Shirts</a>
+												<li><a href="maincategory.php?cid=1">T-Shirts</a>
 												</li>
 												
 												<li><a href="#">Jackets</a>
